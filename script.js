@@ -13,3 +13,10 @@ const symbolInput = document.getElementById('symbols');
 const getRandomNumber = (dataset) => {
     return dataset[Math.floor(Math.random() * dataset.length)];
 }
+
+const generatePassword = (password = "") => {
+if(upperInput.checked){
+    password=getRandomData(upperset);
+}
+
+};
