@@ -20,3 +20,7 @@ const generatePassword = (password = "") => {
   }
   console.log(password);
 };
+
+document.getElementById("btn").addEventListener("click", function () {
+  generatePassword();
+});
