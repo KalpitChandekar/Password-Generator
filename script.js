@@ -5,7 +5,7 @@ const symbolSet = "!~@#$%^&()*+-/";
 
 const passBox = document.getElementById("pass-box");
 const totalChar = document.getElementById("total-char");
-const upperInput = document.getElementById("uper-case");
+const upperInput = document.getElementById("upper-case");
 const lowerInput = document.getElementById("lower-case");
 const numberInput = document.getElementById("numbers");
 const symbolInput = document.getElementById("symbols");
@@ -16,9 +16,21 @@ const getRandomNumber = (dataset) => {
 
 const generatePassword = (password = "") => {
   if (upperInput.checked) {
-    password += getRandomData(upperset);
+    password += getRandomNumber(upperSet);
   }
-  console.log(password);
+  if (lowerInput.checked) {
+    password += getRandomNumber(lowerSet);
+  }
+  if (numberInput.checked) {
+    password += getRandomNumber(numberSet);
+  }
+  if (symbolInput.checked) {
+    password += getRandomNumber(symbolSet);
+  }
+  if (password.length < totalChar.value) {
+    return generatePassword(password);
+  }
+  passBox.textContent = password;
 };
 
 document.getElementById("btn").addEventListener("click", function () {
