@@ -1,7 +1,7 @@
 const upperSet = "QWERTYUIOPASDFGHJKLZXCVBNM";
 const lowerSet = "qwertyuiopasdfghjklzxcvbnm";
 const numberSet = "1234567890";
-const symbolSet = "!~@#$%^&()*+-/";
+const symbolSet = "!@#$&";
 
 const passBox = document.getElementById("pass-box");
 const totalChar = document.getElementById("total-char");
